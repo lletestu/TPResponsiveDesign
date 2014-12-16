@@ -2,38 +2,16 @@
 
 
 /* Expand collapse on click */
-/*
- <div class="container">
-     <div class="expandContainer"><span>Expand</span>
-     </div>
 
-     <div class="content">
-         <ul>
-         <li>This is just some random content.</li>
-         <li>This is just some random content.</li>
-         <li>This is just some random content.</li>
-         <li>This is just some random content.</li>
-         </ul>
-     </div>
- </div>
- */
-$(".expandContainer").click(function () {
 
-    $expandContainer = $(this);
+$(".showList").click(function () {
+
+    $expandContainer = $(this).parent();
     //getting the next element
     $content = $expandContainer.next();
     //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $content.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        $header.text(function () {
-            //change text based on condition
-            return $content.is(":visible") ? "Collapse" : "Expand";
-        });
-    });
-
+    $content.slideToggle(500);
 });
-
 
 /* Search jquery line */
 $('#inputSearch').keyup(function () {
