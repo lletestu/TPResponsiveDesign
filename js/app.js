@@ -14,24 +14,33 @@ $(".showList").click(function () {
 });
 
 /* Search jquery line */
-$('#inputSearch').keyup(function () {
+/*$('.search').keyup(function () {
     var input_content = $.trim($(this).val());
     if (!input_content) {
         $('ul>li').show();
     } else {
         $('ul>li').show().not(':contains(' + input_content  + ')').hide();
     }
-});
+});  */
 
-$("#inputSearch").children("input").keypress(function (e) {
+$(".search").keypress(function (e) {
     var key = e.which;
     if(key == 13)  // the enter key code
     {
         var input_value = $(this).val();
         // Get all metro div
-        var metroClass = document.getElementsByClassName('.metroDiv')
+        var metroLists = document.getElementsByClassName('contentMetroList')
 
-        for(var i=0; i<metroClass.length; i++){
+        // for each metro div content
+        metroLists.each(function(){
+            // for each li in metro
+            $(this).find('li').each(function(){
+                var current = $(this);
+                //if()
+            });
+        });
+
+        /*for(var i=0; i<metroClass.length; i++){
             // Get element
             var element = metroClass.eq(i);
 
@@ -44,6 +53,6 @@ $("#inputSearch").children("input").keypress(function (e) {
                 element.hide();
             }
 
-        }
+        } */
     }
 });
