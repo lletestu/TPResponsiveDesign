@@ -27,9 +27,9 @@ body {
 }
 
 body > header {
-  height: 100px;
+  height: 120px;
   margin-bottom: 20px;
-  background: linear-gradient(to bottom, white, #ebeff1);
+  background: linear-gradient(to bottom, hsl(90, 0%, 100%), #ebeff1);
   box-shadow: 1px 0px 8px rgb(200, 200, 200);
 }
 
@@ -48,7 +48,7 @@ input.search {
   height: 28px;
   width: 300px;
   font-size: 13px;
-  background: url("../img/icon/search.png") white no-repeat 8px;
+  background: url("../img/icon/search.png") hsl(90, 0%, 100%) no-repeat 8px;
   padding: 3px 6px 3px 25px;
   margin: 0 0 0 40px;
   border: 1px solid hsl(209, 36%, 86%);
@@ -60,14 +60,69 @@ header .logo-search form {
   margin-top: 15px;
 }
 
+h1 {
+  color: hsl(90, 0%, 0%);
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+  color: hsl(90, 0%, 0%);
+  margin-bottom: 8px;
+}
+
 .title{
   margin-left: 30px;
   border-bottom: 1px solid ;
 }
 
+#albums {
+  margin-top: 20px;
+  margin-left: 50px;
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+#albums article {
+  margin: 0 12px 30px 0;
+  font-size: 13px;
+}
+
 #albums article img {
   width: 200px;
-  transition: all 0.3s ease 0;
+  float: left;
+
+}
+
+#albums article figcaption {
+  margin-top: 20px;
+}
+
+#albums article > .desc{
+  margin-top: 10px;
+}
+
+.showListLine {
+  background-color: #efefef;
+  text-decoration: none;
+  font-size: 12px;
+  color: hsl(90, 0%, 0%);
+  border-radius: 5px;
+  border: 1px solid hsl(90, 0%, 45%);;
+
+}
+
+.showListLine a{
+  text:hsl(90, 0%, 0%);
+}
+
+.showListLine:hover {
+
+  box-shadow: 4px 3px #efefef;
 }
 
 .showList {
