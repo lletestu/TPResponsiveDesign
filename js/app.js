@@ -13,46 +13,34 @@ $(".showList").click(function () {
     $content.slideToggle(500);
 });
 
-/* Search jquery line */
-/*$('.search').keyup(function () {
-    var input_content = $.trim($(this).val());
-    if (!input_content) {
-        $('ul>li').show();
-    } else {
-        $('ul>li').show().not(':contains(' + input_content  + ')').hide();
-    }
-});  */
 
-$(".search").keypress(function (e) {
-    var key = e.which;
-    if(key == 13)  // the enter key code
-    {
-        var input_value = $(this).val();
-        // Get all metro div
-        var metroLists = document.getElementsByClassName('contentMetroList')
+$(".search").on("keyup", function (e) {
 
-        // for each metro div content
-        metroLists.each(function(){
-            // for each li in metro
-            $(this).find('li').each(function(){
-                var current = $(this);
-                //if()
-            });
-        });
+    var input_value = $(this).val().toLowerCase();;
+    // Get all metro div
+    var i = 0;
 
-        /*for(var i=0; i<metroClass.length; i++){
-            // Get element
-            var element = metroClass.eq(i);
+    $('.contentMetroList').each(function(){
+        // this is inner scope, in reference to the .phrase element
+        var container = $(this);
+        $(this).find('li').each(function(){
+            // cache jquery var
+            var current = $(this);
+            var text = current.text().toLowerCase();;
+            var article = container.closest("article");
+            if (text.indexOf(input_value) > -1) {
+                //article.addClass("show");
+                article.removeClass("hidden")
+                i++;
+                return false;
 
-            // check if element contains search val
-            // if yes remove hide
-            // if else add hide class
-            if (element.className.indexOf(input_value) > -1) {
-                element.show();
             } else {
-                element.hide();
+                //article.hide();
+                article.addClass("hidden");
             }
 
-        } */
-    }
+        });
+    });
+
+    $("#countTotalStation").text("Tous - "+i+" ligne(s)");
 });

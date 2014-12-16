@@ -137,3 +137,7 @@ h2 {
 .showList:hover {
     box-shadow: 4px 3px #efefef;
 }
+
+.hidden {
+    display: none;
+}
