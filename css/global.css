@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'My Lucida';
     src: url('../font/LucidaGrande.ttf');
-    /*font-style: normal;*/
     font-weight: bold;
 }
 
@@ -44,11 +43,11 @@ header .logo-search, header .logo-search img, header .logo-search form, main hea
   float: left;
 }
 header .logo-search {
-  width: 600px;
+  width: 100%;
 }
 
 header .logo-search > img{
-  width: 70px;
+  width: 15em;
 }
 
 input.search {
@@ -102,11 +101,11 @@ h2 {
 #albums article img {
   width: 200px;
   float: left;
-
 }
 
 #albums article figcaption {
   margin-top: 20px;
+  font-size: 18px;
 }
 
 #albums article > .desc{
@@ -133,6 +132,7 @@ h2 {
 }
 
 .showList {
+    margin-top: 10px;
     background-color: #efefef;
     text-decoration: none;
     font-size: 12px;
@@ -146,5 +146,10 @@ h2 {
 }
 
 .hidden {
-    display: none;
+  display: none;
+}
+
+.contentMetroList{
+  margin-top: 10px;
+  float: left;
 }

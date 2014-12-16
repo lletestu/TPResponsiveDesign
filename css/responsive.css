@@ -3,7 +3,7 @@
 /* MEDIA QUERIES */
 @media screen and (max-width: 480px) {
     html {
-        font-size: 75%;
+        font-size: 60%;
     }
     header {
         display:block;
