@@ -2,20 +2,28 @@
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 480px) {
+    html {
+        font-size: 75%;
+    }
     header {
         display:block;
     }
-    article{
-        background-color:#efefef;
+    article {
         margin-bottom:5px;
         width:250px;
         text-align:center;
+    }
+    article:nth-child(2n+1){
+        background-color:#efefef;
+    }
+    figcaption{
+        display: none;
     }
     section{
         margin-left:60px;
     }
     .title{
-        margin-left: 90px;
+        margin-left: 60px;
         border-color: white;
     }
 }

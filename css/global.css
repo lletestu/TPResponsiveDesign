@@ -17,18 +17,25 @@ body {
     color: #352a25;
     /*font-family: Georgia, serif;   */
     font-size: 40.5%; /* 1em = 10px */
-    margin: 40px 80px;
+    width:90%;
+    margin-left: 5%;
+
+    /*margin: 40px 80px; */
 }
 
 .wrapper {
-  width: 1280px;
-  padding: 25px;
+  /*width: 1280px; */
+  width: 100%;
+  /*padding: 25px;  */
+  padding: 1.8573551263%; /* 25px*100% / 1346px */
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 body > header {
   height: 120px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px; */
+  margin-bottom: 1.38888888888%; /* 20px*90% / 1296px */
   background: linear-gradient(to bottom, hsl(90, 0%, 100%), #ebeff1);
   box-shadow: 1px 0px 8px rgb(200, 200, 200);
 }
